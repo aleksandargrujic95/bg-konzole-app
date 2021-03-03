@@ -17,13 +17,17 @@ class CreateCustomersTable extends Migration
             $table->bigIncrements('id');
             $table->string('place')->default('/');
             $table->string('address')->default('/');
+            $table->string('address2')->default('/');
             $table->string('name')->default('No Name');
             $table->string('phone_number')->default('00000000000');
+            $table->string('phone_number2')->nullable();
             $table->integer('number_of_rent')->default(0);
             $table->decimal('money_spent')->default(0);
             $table->string('comment')->default('/');
             $table->integer('referal_points')->default(0);
             $table->string('find_us')->default('/');
+            $table->mediumText('image')->nullable();
+             $table->bigInteger('public_id')->nullable();
             $table->timestamps();
         });
     }

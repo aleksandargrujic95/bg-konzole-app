@@ -21,6 +21,10 @@ class CreateNotificationsTable extends Migration
             $table->boolean('active');
             $table->unsignedBigInteger('customer_id');
             $table->unsignedBigInteger('product_id');
+            $table->string('reservation_id')->nullable();
+            $table->string('joystick')->nullable();
+            $table->string('other_prod_1')->nullable();
+            $table->string('other_prod_2')->nullable();
             $table->timestamps();
         });
     }
